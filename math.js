@@ -11,7 +11,7 @@ const dist = (a, b) => mag(sub(a, b));
  * of the dot product of AB and AC and the product of their magnitudes
  * is equal to one:
  *
- * dot(AB, AC) / (|AB| * |AC|)| = 1
+ * |dot(AB, AC) / (|AB| * |AC|)| = 1
  *
  * 3 is an arbitrary magic constant accounting for rounding errors
  */
