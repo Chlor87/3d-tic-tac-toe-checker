@@ -3,6 +3,7 @@
  */
 Object.getOwnPropertyNames(Math).forEach(k => (globalThis[k] = Math[k]));
 
+import { apply } from './fp.js';
 import { colinear } from './math.js';
 
 const X = Symbol('X');
@@ -71,7 +72,7 @@ const choose = (xs, k) =>
  * 3. check if any triple is colinear; if yes, the symbol wins
  */
 const hasWinner = (board, symbol) =>
-  choose(getCoordsFor(board, symbol), 3).some(ps => colinear(...ps));
+  choose(getCoordsFor(board, symbol), 3).some(apply(colinear));
 
 const main = () => {
   console.log(hasWinner(board, X));
