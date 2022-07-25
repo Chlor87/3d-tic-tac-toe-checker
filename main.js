@@ -47,7 +47,9 @@ const getCoordsFor = (board, symbol) =>
     []
   );
 
-// nCr - choose k-sized combinations from xs, or n choose k
+/**
+ * nCr - choose k-sized combinations from xs, or n choose k
+ */
 const choose = (xs, k) =>
   k <= 0 || k > xs.length
     ? []
