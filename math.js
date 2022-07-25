@@ -3,7 +3,7 @@ const sub = (a, b) => {
   return a.map((c, i) => c - (scalar ? b : b[i]));
 };
 const dot = (a, b) => a.reduce((p, c, i) => p + c * b[i], 0);
-const mag = a => Math.hypot(a[0], a[1], a[2]);
+const mag = a => hypot(a[0], a[1], a[2]);
 const dist = (a, b) => mag(sub(a, b));
 
 /**
